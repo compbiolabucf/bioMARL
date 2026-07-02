@@ -1,0 +1,23 @@
+# BioMARL runtime dependencies
+# Validated on: Python 3.10, CUDA 12.4, NVIDIA RTX A4500 (x4), Ubuntu.
+#
+# IMPORTANT: install a CUDA-matched PyTorch build FIRST, e.g. for CUDA 12.4:
+#   pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+# then: pip install -r requirements.txt
+#
+# NOTE: PyTables (tables) must be >=3.10 to be binary-compatible with numpy 2.x
+#       (the HDF5 data I/O breaks with tables 3.9.x under numpy 2.0).
+
+torch==2.6.0
+torch-geometric==2.5.3
+numpy==2.0.2
+scipy==1.14.0
+pandas==2.2.2
+scikit-learn==1.5.1
+xgboost==2.1.0
+lightgbm==4.4.0
+tables==3.10.1
+h5py==3.11.0
+matplotlib==3.9.1
+seaborn==0.13.2
+tqdm==4.66.4

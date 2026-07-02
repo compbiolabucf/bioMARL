@@ -1,0 +1,10 @@
+# Extra dependencies for the comparison baselines in biomarl/baselines/.
+#   pip install -r requirements-baselines.txt
+# biomarl/baselines/__init__.py adds a small compatibility shim so some of these older
+# packages import cleanly under modern scikit-learn.
+mcdm==1.4            # MCDM, RRA
+xgboost==2.1.0      # MCDM, RRA (RRA reuses MCDM's model stack)
+lassonet            # LASSONet
+mrmr_selection      # mRMR  (provides `import mrmr`; may require scikit-learn < 1.4 at runtime)
+sklearn-genetic-opt # GFS   (provides `import sklearn_genetic` / GASearchCV; pulls in tensorflow,
+                    #        which must be compatible with your numpy -- TF import can break under numpy 2.x)

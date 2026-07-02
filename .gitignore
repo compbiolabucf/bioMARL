@@ -1,0 +1,18 @@
+# --- Whitelist approach ---------------------------------------------------
+# This repo folder is a large working directory; only publish the release files.
+# Ignore everything at the root, then re-include the pieces that make up BioMARL.
+/*
+!/.gitignore
+!/README.md
+!/requirements.txt
+!/requirements-baselines.txt
+!/pathways_new.txt
+!/biomarl/
+
+# --- Always ignore these, even inside whitelisted dirs --------------------
+__pycache__/
+*.py[cod]
+*.bak
+*.log
+.DS_Store
+.ipynb_checkpoints/
